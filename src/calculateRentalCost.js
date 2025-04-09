@@ -17,7 +17,7 @@ function calculateRentalCost(days) {
     return generalSum;
   }
 
-  if (days >= MID_TERM && days < LONG_TERM) {
+  if (days < LONG_TERM) {
     generalSum = everyDayCost * days - MID_TERM_DISCOUNT;
 
     return generalSum;
@@ -28,6 +28,8 @@ function calculateRentalCost(days) {
 
     return generalSum;
   }
+
+  return generalSum;
 }
 
 module.exports = calculateRentalCost;
